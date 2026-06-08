@@ -71,6 +71,12 @@ body {
 	transition: 1s, opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
+@media (max-width: 480px) {
+	.button {
+		font-size: 25px;
+	}
+}
+
 .button.fade-in {
 	opacity: 1;
 	visibility: visible;
