@@ -1,0 +1,183 @@
+:root {
+	--UNESRBlue: #01519D;
+	--UNESRDarkblue: #013C70;
+    --blue: #000DBE;
+
+    overflow-x: hidden;
+    width: 100%;
+}
+
+*{
+	padding: 0;
+	box-sizing: border-box;
+}
+ 
+body {
+    position: relative;
+    text-align: center;
+	align-items: center;
+	justify-content: center;
+    width: 100%;
+    margin: 0;
+    color: white;
+	font-family: sans-serif;
+    background-image: url('img/background.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
+}
+
+.banner {
+    display: block;
+	background-color: white;
+	color: var(--UNESRBlue);
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+	text-shadow: 0px 0px 15px rgb(Black, Black, Black);
+    width: 100%;
+    min-height: 10px;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 30px black;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.banner.fade-in {
+	opacity: 1;
+	visibility: visible;
+}
+
+.logo {
+	width: 100%;
+	padding-left: 2%;
+}
+
+.button {
+	position: relative;
+	background-color: var(--UNESRBlue);
+	padding: 3.5px 50px 3.5px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	color: white;
+	border: 0;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s, opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.button.fade-in {
+	opacity: 1;
+	visibility: visible;
+}
+
+.button:hover {
+	background-color: var(--UNESRDarkblue);
+	transition: 1s;
+}
+
+.Title {
+    display: block;
+	color: var(--blue);
+	font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 0px 0px 10px rgb(Black, Black, Black,);
+    font-size: 30px;
+    padding: 15px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s ease-in-out, visibility .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.Title.fade-in {
+	padding: 40px;
+	opacity: 1;
+	visibility: visible;
+}
+
+.searchbox {
+	display: block;
+	position: relative;
+	width: 800px;
+	top: 0;
+	padding: 5px 70px 5px 5px;
+	background-color: var(--UNESRBlue);
+	border-radius: 25px;
+	box-shadow: 0 4px 8px rgba(0,0,0,.5);
+	margin: 0px auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+}
+
+.searchbox.fade-in {
+	opacity: 1;
+	visibility: visible;
+}
+
+.searchbox input {
+	width: 735px;
+	padding: 23px;
+	background-color: #FFFFFF;
+	border-radius: 25px 0 0 25px;
+	border: 0;
+	outline: none;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 20px;
+}
+
+.searchbox input::placeholder {color: #aaa;}
+
+.searchbox button {
+	background-color: #FFFFFF;
+	padding: 27.5px 30px 22.5px;
+	top: 5px;
+	right: 5px;
+	position: absolute;
+	border: 0;
+	margin: auto;
+	border-radius: 0 25px 25px 0;
+	cursor: pointer;
+}
+
+label {
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 20px;
+}
+
+select {
+	bottom: 15px;
+	padding: 5px;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 18px;
+	border: 0;
+}
+
+.tab {
+	position: relative;
+	top: 25px;
+	color: black;
+	font-family: Roboto, sans-serif;
+	font-size: 20px;
+	margin: 0px auto;
+	padding: 10px;
+	width: 75%;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 30px black;
+	border-radius: 25px;
+	border-color: blue;
+	background-color: #FFFFFF;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s ease-in-out, visibility .5s ease-in-out, top .5s ease;
+}
+
+.tab.fade-in {
+	opacity: 1;
+	visibility: visible;
+	top: 75px;
+}

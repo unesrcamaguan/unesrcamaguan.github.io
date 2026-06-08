@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Database Test | UNESR Camaguán</title>
+		
+		<link rel="icon" href="img/favicon.ico">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<header>
+		<div class="banner" id="Banner">
+			<span><img src="img/banner.png" alt="" class= "logo"></span>
+			<button type="button" class="button" id="btnEstudiantes"><span>Estudiantes</span></button>
+			<button type="button" class="button" id="btnDocentes"><span>Docentes</span></button>
+			<button type="button" class="button" id="btnCarreras"><span>Carreras</span></button>
+			<button type="button" class="button" id="btnAsignaturas"><span>Asignaturas</span></button>
+			</div>
+	</header>
+	
+	<body>
+		<span class="Title" id="Title">Busqueda de Estudiantes</span>
+		
+		<div class="searchbox" id="searchbox">
+			<input type="search" placeholder="Buscar" id="search-box">
+			<button type="submit">
+				<!-- Inline SVG Magnifying Glass Icon -->
+				<svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				</svg>
+			</button>
+			
+			<p></p>
+			<label for="filters">Busqueda por filtro:</label>
+			<select id="filters" name="filters" required></select>
+		</div>
+		
+		<table border class="tab" id="database-table"></table>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+	<script src="script.js"></script>
+</html>
