@@ -70,13 +70,31 @@ body {
 	visibility: hidden;
 	transition: 1s, opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
+/*
+@media (max-width: 1227px) {
+	.button {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 1190px) {
+	.button {
+		font-size: 37px;
+	}
+}
+
+@media (max-width: 1167px) {
+	.button {
+		font-size: 35px;
+	}
+}
 
 @media (max-width: 480px) {
 	.button {
 		font-size: 25px;
 	}
 }
-
+*/
 .button.fade-in {
 	opacity: 1;
 	visibility: visible;
