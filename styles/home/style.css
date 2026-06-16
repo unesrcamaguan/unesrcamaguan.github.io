@@ -31,7 +31,6 @@ body {
     display: block;
 	position: relative;
 	background-color: var(--UNESRBlue);
-    max-width: 1100px;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
