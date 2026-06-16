@@ -6,27 +6,37 @@
 		<link rel="icon" href="img/favicon.ico">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		
-		<link rel="stylesheet" href="style.css">
+
+		<link rel="stylesheet" href="styles/home/style.css">
+		<style>
+			body {
+				background-image: url('img/background.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+		</style>
 	</head>
 	
 	<header>
-		<div class="banner" id="Banner">
-			<span><img src="img/banner.png" alt="" class= "logo"></span>
+		<div class="menu">
+            <div class="btnfalse"><button><div></div><div></div><div></div></button></div>
+        </div>
+	
+		<div class="banner">
+			<span><img src="img/banner.png" alt="" class= "bannerImg" id="bannerImagen"></span>
+			<span><img src="img/logo.png" alt="" class="logo" id="mobileLogo" hidden></span>
 			<button type="button" class="button" id="btnEstudiantes"><span>Estudiantes</span></button>
 			<button type="button" class="button" id="btnDocentes"><span>Docentes</span></button>
 			<button type="button" class="button" id="btnCarreras"><span>Carreras</span></button>
 			<button type="button" class="button" id="btnAsignaturas"><span>Asignaturas</span></button>
-			</div>
+		</div>
 	</header>
 	
 	<body>
-		<span class="Title" id="Title">Busqueda de Estudiantes</span>
-		
-		<div class="searchbox" id="searchbox">
+		<span class="title">Busqueda de Estudiantes</span>
+		<div class="searchbox">
 			<input type="search" placeholder="Buscar" id="search-box">
 			<button type="submit">
 				<!-- Inline SVG Magnifying Glass Icon -->
@@ -41,7 +51,23 @@
 		</div>
 		
 		<table border class="tab" id="database-table"></table>
-	</body>
+		
+		<div class="overlay"></div>
+		<div class="menufalse">
+			<nav class="nav">
+				<div class="btn"><button><div></div><div></div><div></div></button></div>
+				
+				<ul class="list">
+					<li><a href="#">Aula Territorial</a></li>
+					<li><a href="#">Estructura Organizativa</a></li>
+					<li><a href="#">Publicaciones</a></li>
+					<li><a href="#">Sistema</a></li>
+				</ul>
+            </nav>
+        </div>
+	</body>	
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-	<script src="script.js"></script>
+	<script src="scripts/home/script.js"></script>
+	<script src="scripts/home/responsive.js"></script>
 </html>
