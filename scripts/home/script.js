@@ -15,6 +15,7 @@
 	const listPanel = document.querySelector(".list");
 	//-------------------------------------
 	
+	const simonR = document.querySelector(".Profesor");
 	//--------------- Search ---------------
 	const titleText = document.querySelector(".title");
 	const searchbox = document.querySelector(".searchbox");
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const barraTime = setTimeout(() => {barraSuperior.classList.add('fade-in');}, 300);
 	const studentTime = setTimeout(() => {btnEstudiantes.classList.add('fade-in');}, 600);
 	const docenTime = setTimeout(() => {btnDocentes.classList.add('fade-in');}, 900);
+	const simonTime = setTimeout(() => {simonR.classList.add('fade-in');}, 1000);
 	const raceTime = setTimeout(() => {btnCarreras.classList.add('fade-in');}, 1200);
 	const asigTime = setTimeout(() => {btnAsignaturas.classList.add('fade-in');}, 1500);
 	const titleTime = setTimeout(() => {titleText.classList.add('fade-in');}, 1800);

@@ -108,6 +108,21 @@ body {
 	transition: 1s;
 }
 
+.Profesor {
+	display: flex;
+	position: fixed;
+	width: 50%;
+	bottom: 0;
+	opacity: 0;
+	right: -350px;
+	transition: all 1s ease-in-out;
+}
+
+.Profesor.fade-in {
+	opacity: 50%;
+	right: 0;
+}
+
 .menufalse {
     display: block;
 	position: fixed;
@@ -219,6 +234,7 @@ body {
 
 .title {
     display: block;
+	position: relative;
 	color: var(--blue);
 	font-family: "Roboto Condensed", sans-serif;
     text-shadow: 0px 0px 10px rgb(Black, Black, Black,);
