@@ -1,7 +1,32 @@
-Number,DNI,Names,SNames,Special,Phone,Mail
-1,,Victor,Lima,,0414-147-1810,
-2,,Maria,Nuñez,,,
-3,,Francisco,Galicia,,,
-4,,Maileth,Blanco,,,
-5,,Eliza,Rodriguez,,0424-305-6583,
-6,31.133.002,Rider,Reyes,,0424-332-9803,
+﻿DNI,Names,SNames,BDay,Phone,Time
+10389394,Victor Manuel,Lima,20/03/1968,0414-147-1810,2021-2
+8196575,Maria Josefa,Nuñez Corralez,10/08/1961,,2024-3
+17602526,Maileth Nathaly,Blanco Pérez,05/08/1987,,2025-1
+10619089,Elisa Josefina,Rodriguez Torrealba,09/08/1969,0424-305-6583,2019-1
+31133002,Rider,Reyes,,0424-332-9803,
+11757192,Rosalba Margarita,Parra Seijas,04/09/1974,,2023-2
+20907331,María José,Rivero Seijas,06/02/1992,,2023-2
+18584386,Nazareth de Jesús,Rodríguez,04/04/1989,,2023-2
+19160369,Yisleida Yisneri,Espinoza Burgos,06/11/1990,,2024-1
+14812147,Oscar Lourde,Bolívar,25/05/1979,,2018-2
+20522504,Carlos Eduardo,Querales Infante,03/05/1989,,2023-2
+18583900,Francisco José,Galicia Padilla,17/11/1987,,2024-1
+16827082,Natam José,Camacho Torrealba,29/09/1985,,2019-2
+5278898,Yudit Mercedes,Roche Barreto,13/05/1958,,2024-2
+21315472,María Angélica,Lara Ochoa,25/01/1992,,2024-2
+30168836,Mariel José,Ramirez Mota,24/03/2001,,2024-2
+20091090,Khauhdia Yossimar,Flores Flores,14/06/1990,,2024-2
+17394238,José Rafael,Diamon Pérez,05/10/1985,,2025-1
+27639476,Moises Alberto,Figueredo Lopez,23/02/2000,,2025-1
+28423133,Oriana Carolina,Pérez Gamarra,03/04/2002,,2025-1
+17602348,Leonardo Carmelo,Ascanio Escalona,06/01/1984,,2025-2
+27211160,Ana Karina,Díaz Gutierrez,10/10/1999,,2025-2
+22886558,José Alejandro,Galicia Padilla,11/08/1994,,2025-2
+21278852,Ramon Antonio,Parra Sandoval,06/05/1993,,2023-2
+18146226,Daniel Salvador,Moreno Jimenez,11/09/1987,,2024-2
+9874369,Leonardo José,Goncalves Cadenas,31/12/1969,,2023-2
+19160436,Yamileth,Pérez Joannins,29/01/1990,,
+20230421,Ana Yamileth,Rodríguez Lopez,20/09/1990,,
+8620608,Iris Josefina,Calderon Cadenas,02/03/1964,,
+18220979,José Miercoles,Viña Aparicio,13/04/1988,,
+26028257,Stefani Adielin,Rattia Rivero,16/05/1997

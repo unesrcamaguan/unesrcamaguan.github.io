@@ -80,7 +80,7 @@ function createFilters() {
 	var tablaFiltersTxt = [];
 	switch (dbInUse) {
 		case "Estudiantes": tablaFilters = ["byName", "bySname", "byCI", "byRace", "byLie", "byTime"]; tablaFiltersTxt = ["Por nombres", "Por apellidos", "Por cédula", "Por carrera", "Por mención", "Por cohorte"]; break;
-		case "Docentes": tablaFilters = ["byName", "bySname", "byCI", "bySpecial"]; tablaFiltersTxt = ["Por nombres", "Por apellidos", "Por cédula", "Por especialidad"]; break;
+		case "Docentes": tablaFilters = ["byName", "bySname", "byCI", "byTime"]; tablaFiltersTxt = ["Por nombres", "Por apellidos", "Por cédula", "Por fecha de ingreso"]; break;
 		case "Carreras": tablaFilters = ["byRace", "byLie"]; tablaFiltersTxt = ["Por carrera", "Por mención"]; break;
 		case "Asignaturas": tablaFilters = ["byWork", "byHours", "byRace", "byLie", "byTime"]; tablaFiltersTxt = ["Por asignatura", "Por horas", "Por carrera", "Por mención", "Por cohorte"]; break;
 	}
@@ -129,7 +129,7 @@ function resetTabla() {
 	var tablaHeads = [];
 	switch (dbInUse) {
 		case "Estudiantes": tablaHeads = ["Nombres", "Apellidos", "Cédula", "Carrera", "Mención", "Cohorte", "Teléfono"]; break;
-		case "Docentes": tablaHeads = ["Nombres", "Apellidos", "Cédula", "Especialidad", "Teléfono", "Correo"]; break;
+		case "Docentes": tablaHeads = ["Nombres", "Apellidos", "Cédula", "Fecha de Nacimiento", "Teléfono", "Fecha de Ingreso"]; break;
 		case "Carreras": tablaHeads = ["Carrera", "Mención", "Duración"]; break;
 		case "Asignaturas": tablaHeads = ["Asignatura", "Horas", "Carrera","Mención","Cohorte"]; break;
 	}
@@ -150,7 +150,7 @@ function search(sFilter, input, i) {
 	var tablaChilds = [];
 	switch (dbInUse) {
 		case "Estudiantes": tablaChilds = [dbArray[i].Names, dbArray[i].SNames, dbArray[i].DNI, dbArray[i].Race, dbArray[i].Lie, dbArray[i].Time, dbArray[i].Phone]; break;
-		case "Docentes": tablaChilds = [dbArray[i].Names, dbArray[i].SNames, dbArray[i].DNI, dbArray[i].Special, dbArray[i].Phone, dbArray[i].Mail]; break;
+		case "Docentes": tablaChilds = [dbArray[i].Names, dbArray[i].SNames, dbArray[i].DNI, dbArray[i].BDay, dbArray[i].Phone, dbArray[i].Time]; break;
 		case "Carreras": tablaChilds = [dbArray[i].Race, dbArray[i].Lie, dbArray[i].Time]; break;
 		case "Asignaturas": tablaChilds = [dbArray[i].Work, dbArray[i].Hours, dbArray[i].Race, dbArray[i].Lie, dbArray[i].Time]; break;
 	}
