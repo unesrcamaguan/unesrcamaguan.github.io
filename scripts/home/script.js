@@ -58,7 +58,11 @@ async function loadGitHubDb(firstTrans = false) {
 	canClick = false;
 	inTimer = setTimeout(() => {
 		titleText.textContent = `Busqueda de ${dbInUse}`;
-		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length-1}`;
+		if (dbInUse == "Estudiantes") {
+			stuNumber.textContent = `Número de Estudiantes: 14`;
+		} else if (dbInUse == "Docentes") {
+			stuNumber.textContent = `Número de Docentes: 31`;
+		}
 		titleText.classList.add('fade-in');
 		if (dbInUse == "Estudiantes" || dbInUse == "Docentes") stuNumber.classList.add('fade-in');
 		searchbox.classList.add('fade-in');
@@ -68,7 +72,11 @@ async function loadGitHubDb(firstTrans = false) {
 	}, 500);
 	if (firstTrans) {
 		clearTimeout(inTimer);
-		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length-1}`;
+		if (dbInUse == "Estudiantes") {
+			stuNumber.textContent = `Número de Estudiantes: 14`;
+		} else if (dbInUse == "Docentes") {
+			stuNumber.textContent = `Número de Docentes: 31`;
+		}
 		createFilters();
 	} else {tabla.classList.remove('fade-in');}
 }
@@ -151,6 +159,9 @@ function search(sFilter, input, i) {
 		if (sFilter == tablaFilters[2]) {result = tablaChilds[2];}
 		if (dbInUse == "Estudiantes" || dbInUse == "Docentes") {
 			if (sFilter == tablaFilters[3]) {result = tablaChilds[4];}
+			if (dbInUse == "Docentes") {
+				if (sFilter == tablaFilters[3]) {result = tablaChilds[6];}
+			}
 			if (sFilter == tablaFilters[4]) {result = tablaChilds[5];}
 			if (sFilter == tablaFilters[5]) {result = tablaChilds[6];}
 		} else {
