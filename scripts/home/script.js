@@ -58,7 +58,7 @@ async function loadGitHubDb(firstTrans = false) {
 	canClick = false;
 	inTimer = setTimeout(() => {
 		titleText.textContent = `Busqueda de ${dbInUse}`;
-		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length}`;
+		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length-1}`;
 		titleText.classList.add('fade-in');
 		if (dbInUse == "Estudiantes" || dbInUse == "Docentes") stuNumber.classList.add('fade-in');
 		searchbox.classList.add('fade-in');
@@ -68,7 +68,7 @@ async function loadGitHubDb(firstTrans = false) {
 	}, 500);
 	if (firstTrans) {
 		clearTimeout(inTimer);
-		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length}`;
+		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length-1}`;
 		createFilters();
 	} else {tabla.classList.remove('fade-in');}
 }
@@ -114,8 +114,8 @@ function resetTabla() {
 	tabla.innerHTML = "";
 	var tablaHeads = [];
 	switch (dbInUse) {
-		case "Estudiantes": tablaHeads = ["Nombres", "Apellidos", "Cédula", "Carrera", "Mención", "Cohorte", "Teléfono"]; break;
-		case "Docentes": tablaHeads = ["Nombres", "Apellidos", "Cédula", "Fecha de Nacimiento", "Teléfono", "Fecha de Ingreso"]; break;
+		case "Estudiantes": tablaHeads = ["Nombres", "Apellidos", "Cédula", "Género", "Carrera", "Mención", "Cohorte", "Teléfono"]; break;
+		case "Docentes": tablaHeads = ["Nombres", "Apellidos", "Cédula", "Género", "Fecha de Nacimiento", "Teléfono", "Fecha de Ingreso"]; break;
 		case "Carreras": tablaHeads = ["Carrera", "Mención", "Duración"]; break;
 		case "Asignaturas": tablaHeads = ["Asignatura", "Horas", "Carrera","Mención","Cohorte"]; break;
 	}
@@ -135,8 +135,8 @@ function newTablaElement(newElement, newText) {
 function search(sFilter, input, i) {
 	var tablaChilds = [];
 	switch (dbInUse) {
-		case "Estudiantes": tablaChilds = [dbArray[i].Names, dbArray[i].SNames, dbArray[i].DNI, dbArray[i].Race, dbArray[i].Lie, dbArray[i].Time, dbArray[i].Phone]; break;
-		case "Docentes": tablaChilds = [dbArray[i].Names, dbArray[i].SNames, dbArray[i].DNI, dbArray[i].BDay, dbArray[i].Phone, dbArray[i].Time]; break;
+		case "Estudiantes": tablaChilds = [dbArray[i].Names, dbArray[i].SNames, dbArray[i].DNI, dbArray[i].Gender, dbArray[i].Race, dbArray[i].Lie, dbArray[i].Time, dbArray[i].Phone]; break;
+		case "Docentes": tablaChilds = [dbArray[i].Names, dbArray[i].SNames, dbArray[i].DNI, dbArray[i].Gender, dbArray[i].BDay, dbArray[i].Phone, dbArray[i].Time]; break;
 		case "Carreras": tablaChilds = [dbArray[i].Race, dbArray[i].Lie, dbArray[i].Time]; break;
 		case "Asignaturas": tablaChilds = [dbArray[i].Work, dbArray[i].Hours, dbArray[i].Race, dbArray[i].Lie, dbArray[i].Time]; break;
 	}
@@ -149,9 +149,15 @@ function search(sFilter, input, i) {
 	
 	if (sFilter != null || sFilter != undefined) {
 		if (sFilter == tablaFilters[2]) {result = tablaChilds[2];}
-		if (sFilter == tablaFilters[3]) {result = tablaChilds[3];}
-		if (sFilter == tablaFilters[4]) {result = tablaChilds[4];}
-		if (sFilter == tablaFilters[5]) {result = tablaChilds[5];}
+		if (dbInUse == "Estudiantes" || dbInUse == "Docentes") {
+			if (sFilter == tablaFilters[3]) {result = tablaChilds[4];}
+			if (sFilter == tablaFilters[4]) {result = tablaChilds[5];}
+			if (sFilter == tablaFilters[5]) {result = tablaChilds[6];}
+		} else {
+			if (sFilter == tablaFilters[3]) {result = tablaChilds[3];}
+			if (sFilter == tablaFilters[4]) {result = tablaChilds[4];}
+			if (sFilter == tablaFilters[5]) {result = tablaChilds[5];}
+		}
 	}
 
 	if (result != undefined) {
