@@ -1,77 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Base de Datos Universitaria | UNESR Camaguán</title>
+		<title>Inicio de Sesión | SAGA | UNESR Camaguán</title>
 		
 		<link rel="icon" href="img/favicon.ico">
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" href="styles/home/style.css">
-		<style>
-			body {
-				background-image: url('img/background.png');
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				background-attachment: fixed;
-			}
-		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles/login/style.css">
 	</head>
 	
-	<header>
-		<div class="menu">
-            <div class="btnfalse"><button><div></div><div></div><div></div></button></div>
-        </div>
-	
-		<div class="banner">
-			<span><img src="img/banner.png" alt="" class= "bannerImg" id="bannerImagen"></span>
-			<span><img src="img/logo.png" alt="" class="logo" id="mobileLogo" hidden></span>
-			<button type="button" class="button" id="btnEstudiantes"><span>Estudiantes</span></button>
-			<button type="button" class="button" id="btnDocentes"><span>Docentes</span></button>
-			<button type="button" class="button" id="btnCarreras"><span>Carreras</span></button>
-			<button type="button" class="button" id="btnAsignaturas"><span>Asignaturas</span></button>
-		</div>
-	</header>
-	
-	<main>
-		<img src="img/SimonRodriguez.png" alt="" class="Profesor">
-	</main>
-	
 	<body>
-		<span class="title">Busqueda de Estudiantes</span>
-		<div class="searchbox">
-			<input type="search" placeholder="Buscar" id="search-box">
-			<button type="submit">
-				<!-- Inline SVG Magnifying Glass Icon -->
-				<svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-				</svg>
-			</button>
-			
-			<p></p>
-			<label for="filters" id="filterTxt">Busqueda por filtro:</label>
-			<select id="filters" name="filters" required></select>
+		<div class="left">
+			<img src="img/banner.png" alt="">
 		</div>
 		
-		<table border class="tab" id="database-table"></table>
+		<div class="right" id="right">
+			<div class="top">
+				<div class="brand">
+					<span>SAGA</span>
+				</div>
+				<a id="register-btn" href="#">Crear cuenta</a>
+			</div>
+			<div class="forms">
+				<div class="login">
+					<h1 class="welcome-message">Bienvenido al Sistema UNESR SAGA</h1>
+					<p class="login-description">Ingrese sus datos.</p>
+					<form action="">
+						<div class="input-container">
+							<input type="text" placeholder="Nombre de usuario o Correo">
+							<input type="password" placeholder="Contraseña">
+						</div>
+						<div class="options-container">
+							<div class="checkbox">
+								<input id="checkbox" type="checkbox">
+								<label for="checkbox">Mantener mi sesión iniciada</label>
+							</div>
+							<!-- <a href="#">¿Olvido su contraseña?</a> -->
+						</div>
+						<a href="saga.html" class="wasa"><button>Ingresar</button></a>
+					</form>
+				</div>
+				<div class="register">
+					<h1 class="welcome-message">Bienvenido al Sistema UNESR SAGA</h1>
+					<p class="login-description">Ingrese los siguientes datos.</p>
+					<form action="">
+						<div class="input-container">
+							<input type="text" placeholder="Correo electronico">
+							<input type="password" placeholder="Contraseña">
+						</div>
+						<button>Registrar</button>
+						<p class="footer-note">Para crear una cuenta debes contar con permisos de la Administración</p>
+					</form>
+				</div>
+			</div>
+		</div>
 		
-		<div class="overlay"></div>
-		<div class="menufalse">
-			<nav class="nav">
-				<div class="btn"><button><div></div><div></div><div></div></button></div>
-				
-				<ul class="list">
-					<li><a href="#">Aula Territorial</a></li>
-					<li><a href="org.html">Estructura Organizativa</a></li>
-					<li><a href="posts.html">Publicaciones</a></li>
-					<li><a href="admin.html">Sistemas</a></li>
-				</ul>
-            </nav>
-        </div>
-	</body>	
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-	<script src="scripts/home/script.js"></script>
-	<script src="scripts/home/responsive.js"></script>
+	</body>
+	
+	<script src="scripts/login/script.js"></script>
 </html>

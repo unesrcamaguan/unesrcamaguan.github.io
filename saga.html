@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>SAGA | UNESR Camaguán</title>
+		
+		<link rel="icon" href="img/favicon.ico">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="styles/home/style.css">
+		<style>
+			body {
+				background-image: url('img/SAGA/background.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+		</style>
+	</head>
+	
+	<header>
+		<div class="banner">
+			<span><img src="img/SAGA/banner.png" alt="" class= "bannerImg" id="bannerImagen"></span>
+			<span><img src="img/SAGA/logo.png" alt="" class="logo" id="mobileLogo" hidden></span>
+			<button type="button" class="button" id="btnEstudiantes"><span>Estudiantes</span></button>
+			<button type="button" class="button" id="btnDocentes"><span>Docentes</span></button>
+			<button type="button" class="button" id="btnCarreras"><span>Carreras</span></button>
+			<button type="button" class="button" id="btnAsignaturas"><span>Asignaturas</span></button>
+		</div>
+	</header>
+	
+	<main>
+		<img src="img/SAGA/SimonRodriguez.png" alt="" class="Profesor">
+	</main>
+	
+	<body>
+		<span class="title">Busqueda de Estudiantes</span>
+		<div class="searchbox">
+			<input type="search" placeholder="Buscar" id="search-box">
+			<button type="submit">
+				<!-- Inline SVG Magnifying Glass Icon -->
+				<svg xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				</svg>
+			</button>
+			
+			<p></p>
+			<label for="filters" id="filterTxt">Busqueda por filtro:</label>
+			<select id="filters" name="filters" required></select>
+		</div>
+		
+		<span class="stuNumber">Número de Estudiantes: 0</span>
+		<table border class="tab" id="database-table"></table>
+	</body>	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+	<script src="scripts/home/script.js"></script>
+	<script src="scripts/home/responsive.js"></script>
+</html>

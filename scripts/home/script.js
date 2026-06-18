@@ -1,18 +1,10 @@
 //--------------- Objects ---------------
-	const barraSuperior = document.querySelector(".menu");
 	//--------------- Banner ---------------
 	const banner = document.querySelector(".banner");
 	const btnEstudiantes = document.getElementById("btnEstudiantes");
 	const btnDocentes = document.getElementById("btnDocentes");
 	const btnCarreras = document.getElementById("btnCarreras");
 	const btnAsignaturas = document.getElementById("btnAsignaturas");
-	//-------------------------------------
-	
-	//------------- Side Panel -------------
-	const overlay = document.querySelector(".overlay");
-	const btnMenu = document.querySelector(".btn");
-	const sidePanel = document.querySelector(".nav");
-	const listPanel = document.querySelector(".list");
 	//-------------------------------------
 	
 	const simonR = document.querySelector(".Profesor");
@@ -24,6 +16,7 @@
 	let searchFilters = document.querySelector("#filters");
 	//-------------------------------------
 	
+	const stuNumber = document.querySelector(".stuNumber");
 	const tabla = document.getElementById("database-table");
 //-------------------------------------
 
@@ -31,16 +24,16 @@ var canClick = false;
 document.addEventListener('DOMContentLoaded', function() {
 	loadGitHubDb(true);
 	
-	const bannerTime = setTimeout(() => {banner.classList.add('fade-in');}, 100);
-	const barraTime = setTimeout(() => {barraSuperior.classList.add('fade-in');}, 300);
+	const bannerTime = setTimeout(() => {banner.classList.add('fade-in');}, 300);
 	const studentTime = setTimeout(() => {btnEstudiantes.classList.add('fade-in');}, 600);
 	const docenTime = setTimeout(() => {btnDocentes.classList.add('fade-in');}, 900);
 	const simonTime = setTimeout(() => {simonR.classList.add('fade-in');}, 1000);
 	const raceTime = setTimeout(() => {btnCarreras.classList.add('fade-in');}, 1200);
 	const asigTime = setTimeout(() => {btnAsignaturas.classList.add('fade-in');}, 1500);
 	const titleTime = setTimeout(() => {titleText.classList.add('fade-in');}, 1800);
-	const searchTime = setTimeout(() => {searchbox.classList.add('fade-in');}, 2300);
-	const clickTime = setTimeout(() => {canClick = true;}, 2800);
+	const searchTime = setTimeout(() => {searchbox.classList.add('fade-in');}, 2100);
+	const numTime = setTimeout(() => {stuNumber.classList.add('fade-in');}, 2600);
+	const clickTime = setTimeout(() => {canClick = true;}, 3100);
 });
 
 const dataRepo = "https://raw.githubusercontent.com/unesrcamaguan/unesrcamaguan.github.io/refs/heads/main/data/";
@@ -59,18 +52,25 @@ async function loadGitHubDb(firstTrans = false) {
 	});
 
 	titleText.classList.remove('fade-in');
+	stuNumber.classList.remove('fade-in');
 	searchbox.classList.remove('fade-in');
 	
 	canClick = false;
 	inTimer = setTimeout(() => {
 		titleText.textContent = `Busqueda de ${dbInUse}`;
+		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length}`;
 		titleText.classList.add('fade-in');
+		if (dbInUse == "Estudiantes" || dbInUse == "Docentes") stuNumber.classList.add('fade-in');
 		searchbox.classList.add('fade-in');
 		canClick = true;
 		
 		createFilters();
 	}, 500);
-	if (firstTrans) {clearTimeout(inTimer); createFilters();} else {tabla.classList.remove('fade-in');}
+	if (firstTrans) {
+		clearTimeout(inTimer);
+		stuNumber.textContent = `Número de ${dbInUse}: ${dbArray.length}`;
+		createFilters();
+	} else {tabla.classList.remove('fade-in');}
 }
 
 var tablaFilters = [];
@@ -92,20 +92,6 @@ function createFilters() {
 		searchFilters.appendChild(element);
 	}
 }
-
-btnMenu.addEventListener('click', () => {
-	sidePanel.classList.toggle('nav-toggle');
-	listPanel.classList.toggle('list-toggle');
-	overlay.classList.toggle('active');
-	btnMenu.classList.toggle("btn-toggle");
-});
-
-overlay.addEventListener('click', () => {
-	sidePanel.classList.remove('nav-toggle');
-	listPanel.classList.remove('list-toggle');
-	overlay.classList.remove('active');
-	btnMenu.classList.remove("btn-toggle");
-});
 
 btnEstudiantes.onclick = () => {if (canClick) {dbInUse = "Estudiantes"; loadGitHubDb();}}
 btnDocentes.onclick = () => {if (canClick) {dbInUse = "Docentes"; loadGitHubDb();}}

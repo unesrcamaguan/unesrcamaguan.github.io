@@ -309,9 +309,28 @@ select {
 	border: 0;
 }
 
+.stuNumber {
+    display: block;
+	position: relative;
+	color: white;
+	font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 0px 0px 10px rgb(Black, Black, Black,);
+    font-size: 25px;
+    padding: 10px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s ease-in-out, visibility .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.stuNumber.fade-in {
+	padding: 35px;
+	opacity: 1;
+	visibility: visible;
+}
+
 .tab {
 	position: relative;
-	top: 25px;
+	top: -15px;
 	color: black;
 	font-family: Roboto, sans-serif;
 	font-size: 20px;
@@ -331,5 +350,5 @@ select {
 .tab.fade-in {
 	opacity: 1;
 	visibility: visible;
-	top: 75px;
+	top: 35px;
 }
